@@ -239,6 +239,11 @@ impl<K: Key, V> DenseSlotMap<K, V> {
         &self.values
     }
 
+    /// Return a (unordered) slice of the values
+    pub fn values_as_slice_mut(&mut self) -> &mut [V] {
+        &mut self.values
+    }
+
     /// Inserts a value into the slot map. Returns a unique key that can be used
     /// to access this value.
     ///
